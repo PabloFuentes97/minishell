@@ -1,0 +1,19 @@
+Chequear dollar expansion
+Imprimir lista de tokens en cmd_op
+cd
+eee
+>
+holas
+Token en comando: cd
+Es comando o argumento: cd
+Token en comando: eee
+Es comando o argumento: eee
+Token en comando: >
+Número de argumentos: 2
+Imprimir matriz del comando
+cd
+eee
+Tipo de comando: 0
+Path to move: /Users/pfuentes/ejercicios/C/minishell_git/eee
+Liberar path
+Tipo de token: 0

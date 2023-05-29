@@ -1,0 +1,2 @@
+echo $(echo hola jeje jojo | grep jeje | wc -w) jeje && echo muy bien
+(echo hola | grep jeje | wc -w) && echo hola | grep hola || echo pepe | grep juan

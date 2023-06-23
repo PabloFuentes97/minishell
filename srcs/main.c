@@ -6,7 +6,7 @@
 /*   By: pfuentes <pfuentes@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 10:48:23 by pfuentes          #+#    #+#             */
-/*   Updated: 2023/06/22 11:55:52 by pfuentes         ###   ########.fr       */
+/*   Updated: 2023/06/23 10:57:40 by pfuentes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 int	lexer(t_mshell *mshell)
 {
-	system("leaks -q minishell");
 	mshell->line = readline("minishell> ");
 	if (!mshell->line)
 	{

@@ -29,6 +29,8 @@ all: $(NAME)
 
 $(NAME): $(OBJS) $(LIBFT_A)
 			$(CC) $(CCFLAGS) $(READLINE) $(OBJS) $(LIBFT_A) -o $(NAME)
+%.o: %.c
+	$(CC) $(FLAGS) -c $< -o $@
 
 $(LIBFT_A):
 		make bonus -C libft

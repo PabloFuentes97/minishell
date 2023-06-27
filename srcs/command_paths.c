@@ -6,7 +6,7 @@
 /*   By: pfuentes <pfuentes@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 13:03:09 by pfuentes          #+#    #+#             */
-/*   Updated: 2023/06/22 11:14:55 by pfuentes         ###   ########.fr       */
+/*   Updated: 2023/06/26 10:40:24 by pfuentes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*correct_path(char **paths, char *command)
 	char	*path;
 
 	cont = 0;
-	if (access(command, X_OK) == 0)
+	if (command[0] == '/' && access(command, X_OK) == 0)
 		return (command);
 	bar = ft_strdup("/");
 	while (paths[cont])

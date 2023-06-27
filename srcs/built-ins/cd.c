@@ -6,7 +6,7 @@
 /*   By: pfuentes <pfuentes@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 13:30:24 by pfuentes          #+#    #+#             */
-/*   Updated: 2023/06/21 13:58:29 by pfuentes         ###   ########.fr       */
+/*   Updated: 2023/06/26 09:29:23 by pfuentes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,10 @@ static char	*get_path_type4(char *cd, char *curr)
 
 static char	*get_path_cd(char *cd, char *curr, t_mshell *mshell)
 {
-	char	*org;
 	char	*to_move;
 	int		type;
 
+	to_move = NULL;
 	type = path_type_cd(cd);
 	if (type == 0)
 	{

@@ -6,34 +6,12 @@
 /*   By: pfuentes <pfuentes@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 09:31:39 by pfuentes          #+#    #+#             */
-/*   Updated: 2023/06/21 13:00:39 by pfuentes         ###   ########.fr       */
+/*   Updated: 2023/06/26 09:27:31 by pfuentes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/minishell.h"
 #include "../libft/libft.h"
-
-static int	compare_here_doc(char *here_doc, char *lim)
-{
-	int		len;
-	char	*here_doc_mod;
-	int		cont;
-
-	here_doc_mod = malloc(sizeof(char) * ft_strlen(here_doc));
-	cont = 0;
-	while (here_doc[cont] != '\n')
-	{
-		here_doc_mod[cont] = here_doc[cont];
-		cont++;
-	}
-	here_doc_mod[cont] = '\0';
-	if (ft_strlen(here_doc_mod) > ft_strlen(lim))
-		len = ft_strlen(here_doc_mod);
-	else
-		len = ft_strlen(lim);
-	free(here_doc_mod);
-	return (len);
-}
 
 static void	write_here_doc(char *lim, char *name, t_mshell *mshell)
 {

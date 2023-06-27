@@ -12,6 +12,7 @@ srcs/token.c srcs/token_dict.c srcs/tokenizer.c srcs/tokens_utils.c \
 srcs/wait_child.c srcs/built-ins/cd.c srcs/built-ins/echo.c srcs/built-ins/env.c srcs/built-ins/exit.c \
 srcs/built-ins/export.c srcs/built-ins/pwd.c srcs/built-ins/unset.c \
 srcs/wildcards.c srcs/wildcards_utils.c srcs/wildcards_utils2.c srcs/main.c
+
 OBJS	= $(SRCS:.c=.o)
 
 LIBFT_A = libft.a
@@ -22,15 +23,13 @@ READLINE = -lreadline -L /Users/$(USER)/.brew/opt/readline/lib
 
 CCFLAGS	= -Wall -Werror -Wextra -Ilibft -I/Users/$(USER)/.brew/opt/readline/include
 
-
-#-Ilibft en CFLAGS
-
-all: $(NAME)
+.c.o:
+	${CC} ${CCFLAGS} -c $< -o ${<:.c=.o} -I.
 
 $(NAME): $(OBJS) $(LIBFT_A)
 			$(CC) $(CCFLAGS) $(READLINE) $(OBJS) $(LIBFT_A) -o $(NAME)
-%.o: %.c
-	$(CC) $(FLAGS) -c $< -o $@
+			
+all: $(NAME)
 
 $(LIBFT_A):
 		make bonus -C libft

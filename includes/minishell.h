@@ -6,15 +6,13 @@
 /*   By: pfuentes <pfuentes@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 12:31:33 by pfuentes          #+#    #+#             */
-/*   Updated: 2023/06/21 13:26:40 by pfuentes         ###   ########.fr       */
+/*   Updated: 2023/06/26 09:25:24 by pfuentes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MINISHELL_H
 # define MINISHELL_H
 
-# include <readline/readline.h>
-# include <readline/history.h>
 # include <string.h>
 # include <signal.h>
 # include <stdio.h>
@@ -26,6 +24,8 @@
 # include <dirent.h>
 # include <limits.h>
 # include <errno.h>
+# include <readline/readline.h>
+# include <readline/history.h>
 # include "../libft/libft.h"
 
 # define CMD 0

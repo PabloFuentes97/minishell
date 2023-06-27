@@ -6,7 +6,7 @@
 /*   By: pfuentes <pfuentes@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 12:13:22 by pfuentes          #+#    #+#             */
-/*   Updated: 2023/06/22 15:51:16 by pfuentes         ###   ########.fr       */
+/*   Updated: 2023/06/26 10:36:17 by pfuentes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,7 @@ void	execute_cmd(char **arg, t_mshell *mshell)
 	int		pid;
 	int		wstatus;
 
+	wstatus = 0;
 	pid = fork();
 	if (pid == 0)
 		child_execute(arg, mshell);

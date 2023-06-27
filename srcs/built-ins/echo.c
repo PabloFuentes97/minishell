@@ -6,7 +6,7 @@
 /*   By: pfuentes <pfuentes@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 09:17:08 by pfuentes          #+#    #+#             */
-/*   Updated: 2023/06/20 10:51:45 by pfuentes         ###   ########.fr       */
+/*   Updated: 2023/06/26 11:12:23 by pfuentes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	flag_type(char **cmd)
 
 	type = 0;
 	if (!cmd[1])
-		return (-1);
+		return (0);
 	if (ft_strncmp(cmd[1], "-n", longer_str(cmd[1], "-n")) == 0)
 		type = 1;
 	return (type);

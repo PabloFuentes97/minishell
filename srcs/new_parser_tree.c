@@ -6,7 +6,7 @@
 /*   By: pfuentes <pfuentes@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 11:49:47 by pfuentes          #+#    #+#             */
-/*   Updated: 2023/06/07 12:17:10 by pfuentes         ###   ########.fr       */
+/*   Updated: 2023/06/26 09:28:38 by pfuentes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ void	tokens_delete_par(t_list **lst)
 
 int	is_parenthesis(t_btree **tree, t_list **tokens)
 {
-	t_token	*token;
 	t_list	*curr;
 
 	curr = *tokens;

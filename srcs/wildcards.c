@@ -6,7 +6,7 @@
 /*   By: pfuentes <pfuentes@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 09:31:07 by pfuentes          #+#    #+#             */
-/*   Updated: 2023/06/20 13:45:45 by pfuentes         ###   ########.fr       */
+/*   Updated: 2023/06/23 15:32:47 by pfuentes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,6 @@ char	*call_wildcards(char *str)
 		wildcards(tokens->next, &wildcards_lst, ft_strdup(token->str));
 	else
 		wildcards(tokens, &wildcards_lst, NULL);
-	print_str_lst(wildcards_lst);
 	sort_str_lst(&wildcards_lst);
 	wildcards_str = lst_to_str_spaces(wildcards_lst);
 	ft_lstclear(&tokens, &free_token);

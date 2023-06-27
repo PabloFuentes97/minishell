@@ -6,7 +6,7 @@
 /*   By: pfuentes <pfuentes@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 12:12:55 by pfuentes          #+#    #+#             */
-/*   Updated: 2023/06/13 17:23:35 by pfuentes         ###   ########.fr       */
+/*   Updated: 2023/06/23 15:35:32 by pfuentes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,8 @@ char	*lst_to_str_spaces(t_list *lst)
 			i++;
 			l++;
 		}
-		str[i] = ' ';
+		if (lst->next)
+			str[i] = ' ';
 		i++;
 		l = 0;
 		lst = lst->next;

@@ -6,7 +6,7 @@
 /*   By: pfuentes <pfuentes@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 10:48:23 by pfuentes          #+#    #+#             */
-/*   Updated: 2023/06/23 10:57:40 by pfuentes         ###   ########.fr       */
+/*   Updated: 2023/06/23 15:41:39 by pfuentes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ void	executer(t_mshell *mshell)
 {
 	op_lst(mshell->parse_tree, mshell);
 	assign_dirs_op(mshell);
-	print_op_lst(mshell->data.op_lst);
 	here_doc_initializer(mshell->parse_tree, mshell);
 	if (!mshell->data.here_doc)
 		mshell->data.here_docs = -1;
@@ -57,8 +56,10 @@ void	executer(t_mshell *mshell)
 void	minishell(t_mshell *mshell)
 {
 	if (lexer(mshell) == 1)
+	{
 		parser(mshell);
-	executer(mshell);
+		executer(mshell);
+	}
 	reset_mshell(mshell);
 }
 

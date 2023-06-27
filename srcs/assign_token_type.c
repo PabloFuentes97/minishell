@@ -6,7 +6,7 @@
 /*   By: pfuentes <pfuentes@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 12:52:22 by pfuentes          #+#    #+#             */
-/*   Updated: 2023/06/16 11:38:26 by pfuentes         ###   ########.fr       */
+/*   Updated: 2023/06/26 09:26:06 by pfuentes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,6 @@ void	assign_tokens_type(t_list **tokens, char **dict)
 {
 	t_list	*curr;
 	t_token	*token;
-	char	*quote;
 
 	curr = *tokens;
 	while (curr)

@@ -6,7 +6,7 @@
 /*   By: pfuentes <pfuentes@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 09:23:12 by pfuentes          #+#    #+#             */
-/*   Updated: 2023/06/22 11:00:33 by pfuentes         ###   ########.fr       */
+/*   Updated: 2023/06/23 15:48:20 by pfuentes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,9 @@ void	b_exit(char **cmd, t_mshell *mshell)
 	if (exit_error_cases(cmd, mshell) > 0)
 		return ;
 	if (cmd[1])
+	{
+		value = ft_atoll(cmd[1]);
 		exit(value);
+	}
 	exit(errno);
 }

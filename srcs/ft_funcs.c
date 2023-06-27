@@ -6,7 +6,7 @@
 /*   By: pfuentes <pfuentes@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 13:56:05 by pfuentes          #+#    #+#             */
-/*   Updated: 2023/06/20 13:35:35 by pfuentes         ###   ########.fr       */
+/*   Updated: 2023/06/26 09:27:15 by pfuentes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ int	ft_open(char *file, int type)
 {
 	int	fd;
 
+	fd = 0;
 	if (type == 0)
 	{
 		fd = open(file, O_RDONLY, 0666);

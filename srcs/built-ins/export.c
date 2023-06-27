@@ -6,7 +6,7 @@
 /*   By: pfuentes <pfuentes@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 13:41:42 by pfuentes          #+#    #+#             */
-/*   Updated: 2023/06/22 13:14:19 by pfuentes         ###   ########.fr       */
+/*   Updated: 2023/06/26 09:29:45 by pfuentes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ static void	export_exiting_var(char *var, t_mshell *mshell)
 static void	export_assign_var(char *key, char *value, t_mshell *mshell)
 {
 	t_list	*node;
-	t_kv	*key_val;
 
 	if (ft_strncmp(key, "", 1) == 0 || ft_strncmp(key, " ", 1) == 0)
 		return ;

@@ -6,7 +6,7 @@
 /*   By: pfuentes <pfuentes@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 09:57:25 by pfuentes          #+#    #+#             */
-/*   Updated: 2023/06/21 10:20:02 by pfuentes         ###   ########.fr       */
+/*   Updated: 2023/06/27 15:32:02 by pfuentes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,12 +63,9 @@ int	*int_ptr(int num)
 
 void	parent_wait_cmd(t_mshell *mshell, int pid, int wstatus)
 {
-	if (mshell->data.op_lst)
-	{
-		if (get_dir(mshell->data.op_lst)->type == PIPE)
-			ft_lstadd_back(&mshell->data.pids_lst, ft_lstnew(int_ptr(pid)));
-	}
-	else
+	if (mshell->data.op_lst && get_dir(mshell->data.op_lst)->type == PIPE)
+		ft_lstadd_back(&mshell->data.pids_lst, ft_lstnew(int_ptr(pid)));
+	else if (!mshell->data.op_lst || get_dir(mshell->data.op_lst)->type != PIPE)
 	{
 		signals_parent_wait();
 		waitpid(pid, &wstatus, 0);
